@@ -64,10 +64,54 @@ var emplyoeee3 = new CommissionEmployee
         Salary=600000,
 
     };
-    Console.WriteLine(emplyoeee1);
-    Console.WriteLine(emplyoeee2);
-    Console.WriteLine(emplyoeee3);
-    Console.WriteLine(emplyoeee4);
+
+    Employee[] employees = new Employee[] { emplyoeee1, emplyoeee2, emplyoeee3, emplyoeee4 };
+    decimal payRoll = 0;
+    foreach (var item in employees)
+    {
+        Console.WriteLine(item);
+        payRoll += item.GetValueToPay();
+    }
+    Console.WriteLine("$.....================");
+    Console.WriteLine($"$Total Payment  ..==={payRoll}");
+
+    Invoice invoice1 = new Invoice
+    {
+        Id = 1010,
+        Description="test1",
+        Quantity=10,
+        Price=20,
+    };
+    Invoice invoice2 = new Invoice
+    {
+        Id = 1020,
+        Description = "test2",
+        Quantity = 10,
+        Price = 20,
+    };
+    Invoice invoice3 = new Invoice
+    {
+        Id = 1030,
+        Description = "test3",
+        Quantity = 10,
+        Price = 20,
+    };
+    Invoice invoice4 = new Invoice
+    {
+        Id = 1040,
+        Description = "test4",
+        Quantity = 10,
+        Price = 20,
+    };
+    Invoice[] invoices= new Invoice[] { invoice1, invoice2, invoice3, invoice4 };
+    decimal TotalInvoice = 0;
+    foreach (var item in invoices) 
+    { 
+        Console.WriteLine(item);
+        TotalInvoice += item.GetValuetoPay();
+    }
+    Console.WriteLine("$.....================");
+    Console.WriteLine($"$TotalInvoice  ..==={TotalInvoice}");
 }
 catch (Exception ex)
 {
