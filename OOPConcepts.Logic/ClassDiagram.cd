@@ -21,5 +21,12 @@
       <FileName>SalaryEmployee.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="OOPConcepts.Logic.MyArray">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJAAAAAAABCAAAEAAAQAAAAAAAACAAIAAAAABIAAAA=</HashCode>
+      <FileName>MyArray.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

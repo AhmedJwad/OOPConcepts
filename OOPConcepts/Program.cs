@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using OOPConcepts.Logic;
+using System.ComponentModel.DataAnnotations;
 
 //try
 //{
@@ -118,14 +119,46 @@ using OOPConcepts.Logic;
 
 //    Console.WriteLine($"Error: {ex.Message}");
 //}
-MyArray array = new (10);
+//------Array---------------
+//MyArray array = new(10);
 //unsorted array
-array.Fill(1, 10);
-Console.WriteLine("unsorted array");
-Console.WriteLine(array);
+//array.Fill(1, 10);
+//Console.WriteLine("unsorted array");
+//Console.WriteLine(array);
 
 //sorted Array 
 
-array.Sort();
-Console.WriteLine("Sorted array");
-Console.WriteLine(array);
+//array.Sort();
+//Console.WriteLine("Sorted array");
+//Console.WriteLine(array);
+
+//------End Array --------
+//---insert in array------
+try
+{
+	Console.WriteLine("Hello Array");
+    MyArray array = new(50);
+	array.Fill();	
+	Console.WriteLine(array);
+
+	Console.WriteLine("odd number");
+    var odds= array.GetOdds();
+    Console.WriteLine(odds);
+
+    Console.WriteLine("Prime number");
+    var Prime = array.IsPrime();
+    Console.WriteLine(Prime);
+
+    Console.WriteLine("Not Repeated");
+    var NonRepeated = array.GetNonRepeated();
+    Console.WriteLine(NonRepeated);
+
+    Console.WriteLine("Most Repeated");
+    var MostRepeated = array.GetMostRepeated();
+    Console.WriteLine(MostRepeated);
+
+}
+catch (Exception ex)
+{
+	Console.WriteLine(ex.Message);
+}
